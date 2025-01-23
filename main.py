@@ -23,5 +23,6 @@ while True:
     name = input("What is your name?")
     def turnleft():
      robot.motors(-1,1, 40)
-
-    turnleft()
+    #if type turn they turn
+    if  some_string == "turn":
+      def turnleft():
