@@ -2,6 +2,21 @@
 from simulator import robot
 import time
 
+def turnleft(seconds):
+    robot.motors(-1,1, seconds)
+
+def turnright(seconds):
+    robot.motors(1, -1, seconds)
+def forward():
+    robot.motors(1, 1, 60)
+def backwards(): 
+    robot.motors(-1, -1, 0)
+    return 1
+def jump():
+    forward()
+    backwards()
+    return 1
+
 #keep robot open until told to stop
 while True:
     # print out instructions for user
@@ -21,8 +36,9 @@ while True:
     color = input("What is your favourite color?")
     animal = input("What is your favourite animal?")
     name = input("What is your name?")
-    def turnleft():
-     robot.motors(-1,1, 40)
+    
     #if type turn they turn
     if  some_string == "turn":
-      def turnleft():
+      turnleft(20)
+
+    a = jump()
